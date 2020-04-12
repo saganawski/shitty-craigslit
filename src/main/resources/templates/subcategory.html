@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${name}"></title>
+</head>
+<body>
+	<h1><span th:text="${name}"></span></h1>
+	<ol>
+<!-- 		<li th:each="post : ${posts}" th:href="@{'/post/ +${post}}" th:text="${post}"></li> -->
+		<li th:each="post : ${posts}" >
+			<span th:text="${post}"></span>
+			<a th:href="@{'/post/' + ${post}}">view</a>
+		</li>
+	</ol>
+</body>
+</html>
